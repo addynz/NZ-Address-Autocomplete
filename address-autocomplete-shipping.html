@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing and Shipping Autocomplete Address Form</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link type="text/css" rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.css">
+    <style>
+        .awesomplete {
+            display: block !important;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10pt;
+        }
+        .field {
+            width: 300px;        
+        }
+        .label {
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Shipping Address</h2>
+        <p><b>Physical NZ street addresses only.</b></p>
+
+        <table>
+            <tr>
+                <td class="label">Address Line 1</td>
+                <td><input type="text" class="field" id="shipping-address1" placeholder="Start typing an address.." auto-complete></td>
+            </tr>
+            <tr>
+                <td>Address Line 2</td>
+                <td><input type="text" class="field" id="shipping-address2"></td>
+            </tr>
+            <tr>
+                <td>Suburb</td>
+                <td><input type="text" class="field" id="shipping-suburb"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" class="field" id="shipping-city"></td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td><input type="text" class="field" id="shipping-region"></td>
+            </tr>
+            <tr>
+                <td>Postcode</td>
+                <td><input type="text" class="field" id="shipping-postcode"></td>
+            </tr>
+        </table>
+
+        <h2>Billing Address</h2>
+        <p><b>Any NZ address; including PO Boxes or Private Bag numbers.</b></p>
+
+        <p><label><input type="checkbox" id="billingChecked" checked onclick="toggleBilling()" /> Same as shipping</label></p>
+
+        <table id="billing-table" style="display: none;">
+            <tr>
+                <td class="label">Address Line 1</td>
+                <td><input type="text" class="field" id="billing-address1" placeholder="Start typing an address.." auto-complete></td>
+            </tr>
+            <tr>
+                <td>Address Line 2</td>
+                <td><input type="text" class="field" id="billing-address2"></td>
+            </tr>
+            <tr>
+                <td>Suburb</td>
+                <td><input type="text" class="field" id="billing-suburb"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" class="field" id="billing-city"></td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td><input type="text" class="field" id="billing-region"></td>
+            </tr>
+            <tr>
+                <td>Postcode</td>
+                <td><input type="text" class="field" id="billing-postcode"></td>
+            </tr>
+        </table>
+    </form>    
+    <script type="text/javascript">
+        // Show or hide the billing address
+        function toggleBilling() {
+            var table = document.getElementById("billing-table");
+            table.style.display = table.style.display === "none" ? "block" : "none";
+        }
+
+        // This is the callback function to initialise the address autocomplete script
+        function initAddy() {
+            // Shipping Address Autocomplete Setup
+            var shippingFields = {
+                address1: document.getElementById("shipping-address1"),
+                address2: document.getElementById("shipping-address2"),
+                suburb: document.getElementById("shipping-suburb"),
+                city: document.getElementById("shipping-city"),
+                region: document.getElementById("shipping-region"),
+                postcode: document.getElementById("shipping-postcode")
+            }
+
+            // Shipping Address Options
+            var shippingOptions = {
+                maxResults: 15,      // suggest 15 results at a time (default is 10)
+                excludePostBox: true // excludes PO Boxes and Private Bags (default is false)
+            }
+
+            var shippingAddy = new AddyComplete(document.getElementById("shipping-address1"), shippingFields, shippingOptions);
+
+            // Billing Address Autocomplete Setup
+            var billingAddy = new AddyComplete(document.getElementById("billing-address1"));
+            billingAddy.fields = {
+                address1: document.getElementById("billing-address1"),
+                address2: document.getElementById("billing-address2"),
+                suburb: document.getElementById("billing-suburb"),
+                city: document.getElementById("billing-city"),
+                region: document.getElementById("billing-region"),
+                postcode: document.getElementById("billing-postcode")
+            }
+        }
+    </script>
+    <script src="/scripts/autocomplete/2.1.0/addycomplete.min.js?key=YOUR-ADDY-KEY&callback=initAddy" async defer></script>
+</body>
+</html>
