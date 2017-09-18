@@ -54,6 +54,8 @@ function initAddy() {
 }
 ```
 
+Live demo: <https://www.addy.co.nz/nz-address-autocomplete-example>
+
 ## Links
 
 Official Addy site: <https://www.addy.co.nz/>
