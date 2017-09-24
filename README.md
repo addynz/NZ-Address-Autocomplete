@@ -17,7 +17,7 @@ Before you start:
 1) Include awesomplete.css in your page, via the usual tags:
 
 ```html
-<link rel="stylesheet" href="awesomplete.css" />
+<link rel="stylesheet" href="addycomplete.min.css" />
 ```
 
 2) Include addycomplete.js at the bottom of the page, before closing the body tag:
@@ -30,27 +30,15 @@ Replace YOUR-ADDY-KEY with your own Addy API Key. Get started with a free accoun
 Define the fields and options that will be called by the initAddy callback function once the script has loaded.
 
 ```html
-// This is the callback function to initialise the address autocomplete script
 function initAddy() {
-    // Address Fields
-    var addressFields = {
+    var addyComplete = new AddyComplete(document.getElementById("address1"));
+    addyComplete.fields = {
         address1: document.getElementById("address1"),
         address2: document.getElementById("address2"),
         suburb: document.getElementById("suburb"),
         city: document.getElementById("city"),
         postcode: document.getElementById("postcode")
     }
-
-    // Address Options
-    var shippingOptions = {
-        maxResults: 15,       // suggest 15 results at a time (default is 10)
-        excludePostBox: false // excludes PO Boxes and Private Bags (default is false)
-    }
-
-    // Field to attach the autocomplete to
-    var addressAutocompleteField = document.getElementById("address1");
-
-    var addyComplete = new AddyComplete(addressAutocompleteField, shippingFields, shippingOptions);
 }
 ```
 
