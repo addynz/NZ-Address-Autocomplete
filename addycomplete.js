@@ -101,7 +101,7 @@ function AddyComplete(input, fields) {
         };
     };
 
-    function setAddress(address) {
+    this.setAddress = function(address) {
         if (me.fields.address) me.fields.address.value = address.displayline;
         if (me.fields.suburb) me.fields.suburb.value = address.suburb;
         if (me.fields.city) me.fields.city.value = address.city;
@@ -111,6 +111,10 @@ function AddyComplete(input, fields) {
         if (me.fields.line2) me.fields.line2.value = address.address2;
         if (me.fields.line3) me.fields.line3.value = address.address3;
         if (me.fields.line4) me.fields.line4.value = address.address4;
+
+        if (!me.fields.city && me.fields.suburb && address.suburb === "" && address.city !== "") {
+            me.fields.suburb = address.city;
+        }
 
         if (me.fields.address1 && me.fields.address2) {
             if (address.address4 || address.address2.indexOf("RD ") === 0) {
@@ -147,9 +151,9 @@ function AddyComplete(input, fields) {
 
     input.addEventListener("awesomplete-selectcomplete", function (e) {
         sendRequest(me.urlBase + "api/address/" + e.text.value, function (address) {
-            setAddress(address);
-        });
-    }, false);
+            this.setAddress(address);
+        }.bind(this));
+    }.bind(this), false);
 }
 
 // Execute the callback function if it defined
