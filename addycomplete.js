@@ -113,7 +113,7 @@ function AddyComplete(input, fields) {
         if (me.fields.line4) me.fields.line4.value = address.address4;
 
         if (!me.fields.city && me.fields.suburb && address.suburb === "" && address.city !== "") {
-            me.fields.suburb = address.city;
+            me.fields.suburb.value = address.city;
         }
 
         if (me.fields.address1 && me.fields.address2) {
