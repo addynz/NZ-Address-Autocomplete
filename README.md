@@ -12,9 +12,9 @@ widget by extending it to call Addy's RESTful API address service.
 
 ![Addy Address Autocomplete](https://github.com/addynz/NZ-Address-Autocomplete/blob/master/MobileDevices.png)
 
-## Basic Usage
+## Get Started
 
-Before you start:
+Create a free account <https://www.addy.co.nz/signup> to get an API key.
 
 1) Include awesomplete.css in your page, via the usual tags:
 
@@ -27,7 +27,7 @@ Before you start:
 ```html
 <script src="addycomplete.min.js?key=YOUR-ADDY-KEY&callback=initAddy" async defer></script>
 ```
-Replace YOUR-ADDY-KEY with your own Addy API Key. Get started with a free account: <https://www.addy.co.nz/signup>.
+Replace YOUR-ADDY-KEY with your own Addy API Key. 
 
 Define the fields and options that will be called by the initAddy callback function once the script has loaded.
 
@@ -44,7 +44,7 @@ function initAddy() {
 }
 ```
 
-Live demo: <https://www.addy.co.nz/nz-address-autocomplete-example>
+Live demo and documentation: <https://www.addy.co.nz/nz-address-autocomplete-example>
 
 ## Links
 
