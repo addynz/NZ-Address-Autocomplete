@@ -29,7 +29,7 @@ Replace YOUR-ADDY-KEY with your own Addy API Key. Get started with a free accoun
 
 Define the fields and options that will be called by the initAddy callback function once the script has loaded.
 
-```html
+```javascript
 function initAddy() {
     var addyComplete = new AddyComplete(document.getElementById("address1"));
     addyComplete.fields = {
