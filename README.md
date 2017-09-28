@@ -7,10 +7,16 @@ Addy's Address Autocomplete will suggest New Zealand street addresses while you 
 This repository contains lightweight and simple code samples for calling the address RESTful API, validating addresses against the 
 NZ Postal Address File (PAF) and LINZ databases, from a HTML and JavaScript address capture form.
 
-The autocomplete code is based on the awesomplete <https://github.com/LeaVerou/awesomplete> (MIT License) 
-widget by extending it to call Addy's RESTful API address service.
-
 ![Addy Address Autocomplete](https://github.com/addynz/NZ-Address-Autocomplete/blob/master/MobileDevices.png)
+
+Addy's service use intelligent fuzzy matching for addresses. This means that if a typo, invalid suburb or partially correct address is entered, customers can still find the right delivery or billing address because the addresses are validated against actual delivery point data from official address sources, including the New Zealand Postal Address File (PAF).
+
+## Benefits
+
+- Reduce friction and increase conversion rates with a fast checkout process 
+- Create a delightful checkout experience for repeated business
+- Deliver to the right address, the first time
+- Verify and validate address details in real-time
 
 ## Get Started
 
@@ -45,6 +51,14 @@ function initAddy() {
 ```
 
 Live demo and documentation: <https://www.addy.co.nz/nz-address-autocomplete-example>
+
+## Awesomplete Extension
+
+Addy's autocomplete code is based on the awesomplete <https://github.com/LeaVerou/awesomplete> (MIT License) 
+widget by extending it to call Addy's RESTful API address service.
+
+## Prices
+Addy's address autocomplete widget is free of charge; download and install it at no cost.  Just setup an account with Addy to get your 1,500 free completed address lookups per month.  If you require additional address transactions, simply pay as you go. See: https://www.addy.co.nz/pricing
 
 ## Links
 
