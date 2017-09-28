@@ -10,6 +10,8 @@ NZ Postal Address File (PAF) and LINZ databases, from a HTML and JavaScript addr
 The autocomplete code is based on the awesomplete <https://github.com/LeaVerou/awesomplete> (MIT License) 
 widget by extending it to call Addy's RESTful API address service.
 
+![Addy Address Autocomplete](https://github.com/addynz/NZ-Address-Autocomplete/blob/master/MobileDevices.png)
+
 ## Basic Usage
 
 Before you start:
