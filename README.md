@@ -22,7 +22,7 @@ Addy's service use intelligent fuzzy matching for addresses. This means that if 
 
 Create a free account <https://www.addy.co.nz/signup> to get an API key.
 
-1) Include awesomplete.css in your page, via the usual tags:
+1) Include addycomplete.min.css in your page, via the usual tags:
 
 ```html
 <link rel="stylesheet" href="addycomplete.min.css" />
