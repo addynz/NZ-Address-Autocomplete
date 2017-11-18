@@ -28,7 +28,7 @@ Create a free account <https://www.addy.co.nz/signup> to get an API key.
 <link rel="stylesheet" href="addycomplete.min.css" />
 ```
 
-2) Include addycomplete.js at the bottom of the page, before closing the body tag:
+2) Include addycomplete.min.js at the bottom of the page, before closing the body tag:
 
 ```html
 <script src="addycomplete.min.js?key=YOUR-ADDY-KEY&callback=initAddy" async defer></script>
