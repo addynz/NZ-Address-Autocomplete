@@ -130,6 +130,14 @@ function AddyComplete(input, fields) {
                 me.fields.address1.value = address.displayline;
                 me.fields.address2.value = '';
             }
+
+            // Combine address 1 with address 2 and use address 2 as the suburb
+            if (!me.fields.suburb && address.suburb && address.suburb !== "") {
+                if (me.fields.address2.value !== "") {
+                    me.fields.address1.value += ", " + me.fields.address2.value;
+                }
+                me.fields.address2.value = address.suburb;
+            }
         } else if (me.fields.address1 && !me.fields.address2) {
             me.fields.address1.value = address.displayline;
         }
