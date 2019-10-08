@@ -57,7 +57,7 @@ Addy's autocomplete code is based on the awesomplete <https://github.com/LeaVero
 widget by extending it to call Addy's NZ address finder API.
 
 ## Prices
-Addy's address autocomplete widget is free of charge; download and install it at no cost.  Just setup an account with Addy to get your 1,500 free completed address lookups per month.  If you require additional address transactions, simply pay as you go. See: https://www.addy.co.nz/pricing
+Addy's address autocomplete widget is free of charge; download and install it at no cost.  Just setup an account with Addy. See: https://www.addy.co.nz/pricing
 
 ## Links
 
