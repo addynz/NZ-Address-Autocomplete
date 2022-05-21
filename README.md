@@ -1,3 +1,5 @@
+# This repository has been made obsolete. Use ![Address-Lookup](https://github.com/addynz/Address-Lookup) repository instead.
+
 # Addy's Address Autocomplete
 
 https://www.addy.co.nz/
